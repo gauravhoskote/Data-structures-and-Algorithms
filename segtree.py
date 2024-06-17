@@ -29,7 +29,7 @@ class segment_tree:
             self.t[v] = newval
         else:
             tm = tl + (tr - tl)//2
-            if tm > pos:
+            if tm >= pos:
                 self.update_element(2*v, newval, pos, tl, tm)
             else:
                 self.update_element(2*v+1, newval, pos, tm+1, tr)
